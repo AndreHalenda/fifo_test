@@ -1,0 +1,28 @@
+{
+    "canisters": {
+      "motoko": {
+        "main": "src/motoko/main.mo",
+        "type": "motoko"
+      },
+      "rust": {
+        "build": "cargo build --target wasm32-unknown-unknown --package  rust --release",
+        "candid": "src/rust/rust.did",
+        "wasm": "target/wasm32-unknown-unknown/release/rust.wasm",
+        "type": "custom"
+      }
+    },
+    "defaults": {
+      "build": {
+        "args": "",
+        "packtool": ""
+      }
+    },
+    "dfx": "0.8.3",
+    "networks": {
+      "local": {
+        "bind": "127.0.0.1:8000",
+        "type": "ephemeral"
+      }
+    },
+    "version": 1
+  }
